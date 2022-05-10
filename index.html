@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-shape">
+            <div class="content">
+                <div class="buttons-above">
+                    <button class="buttons-above__settings">Настройка</button>
+                    <button class="buttons-above__exit">Выйти</button>
+                </div>
+                <div class="chat">
+                    <div class="chat-window">
+
+                    </div>
+                </div>
+                <div class="message-below">
+                    <form class="message-below__form" onsubmit="event.preventDefault()">
+                        <input class="message-below__input" placeholder="Сообщение...">
+                        <button class="message-below__button">-></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="modal-settings" style="display: none">
+            <div class="modal-settings__content">
+                <div class="modal-settings__header">
+                    <p class="modal-settings__article">Настройка</p>
+                    <button class="modal-settings__exit">X</button>
+                </div>
+                <p class="modal-settings__explanation">Имя в чате</p>
+                <form class="modal-settings__form" onsubmit="event.preventDefault()">  
+                    <input type="text" class="modal-settings__input">
+                    <button class="modal-settings__button">-></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-autorization" style="display: none">
+            <div class="modal-autorization__content">
+                <div class="modal-autorization__header">
+                    <p class="modal-autorization__article">Авторизация</p>
+                    <button class="modal-autorization__exit">X</button>
+                </div>
+                <p class="modal-autorization__explanation">Почта:</p>
+                <form class="modal-autorization__form" onsubmit="event.preventDefault()">  
+                    <input type="email" class="modal-autorization__input">
+                    <button type="button" class="modal-autorization__button">Получить код</button>
+                </form>
+                <p class="modal-autorization__code">У меня уже есть код</p>
+            </div>
+        </div>
+
+        <div class="modal-confirmation" style="display: none">
+            <div class="modal-confirmation__content">
+                <div class="modal-confirmation__header">
+                    <p class="modal-confirmation__article">Подтверждение</p>
+                    <button class="modal-confirmation__exit">X</button>
+                </div>
+                <p class="modal-confirmation__explanation">Код:</p>
+                <form class="modal-confirmation__form" onsubmit="event.preventDefault()">  
+                    <input type="text" class="modal-confirmation__input">
+                    <button class="modal-confirmation__button">Войти</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="/js/main.js" type="module"></script>
+</html>
+
+<template id="template-message">
+    <p class="message__text"></p>
+    <p class="message__time"></p>
+</template> 
